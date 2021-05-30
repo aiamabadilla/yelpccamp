@@ -26,9 +26,9 @@ const userRoutes = require('./routes/users');
 
 const db = mongoose.connection;
 const app = express();
-const port = process.env.PORTf || 3000;
-const dbUrl = process.env.DB_URLf || 'mongodb://localhost:27017/yelp-camp';
-const secret = process.env.SECRETf || 'thisisasecret';
+const port = process.env.PORT || 3000;
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+const secret = process.env.SECRET || 'thisisasecret';
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
