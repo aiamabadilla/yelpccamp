@@ -12,10 +12,11 @@
                 <a class="nav-link" href="/campgrounds/new">New Campground</a>
             </div>
             <div class="navbar-nav ms-auto">
-                <% if (!currentUser) { %>
+                <% if (!currentUser) {  %>
                     <a class="nav-link" href='/login'>Login</a>
                     <a class="nav-link" href='/register'>Register</a>
-                    <% } else { %>
+                    <% } else { console.log(currentUser) %>
+                        <a href="" class="nav-link"><%= currentUser.username %> </a>
                         <a class="nav-link" href='/logout'>Logout</a>
                         <% } %>
             </div>
